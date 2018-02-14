@@ -15,6 +15,7 @@ private class LeadServiceTest {
                 Schema.SObjectType.Lead.fields.HasValidatedEmail__c.label);
         
         // When
+        Test.setMock(HttpCalloutMock.class, new MetasploitServiceMock());
         Test.startTest();
 
         Lead whenBugs = LeadService.getInstance().validateEmail(
