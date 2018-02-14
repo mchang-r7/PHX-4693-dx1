@@ -1,5 +1,8 @@
 public with sharing class LeadService {
 
+    /**
+     * @return a functional instance
+     */
     public static LeadService getInstance() {
         return new LeadService();
     }
