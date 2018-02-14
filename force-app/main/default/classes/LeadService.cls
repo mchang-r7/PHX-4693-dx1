@@ -6,6 +6,24 @@ public with sharing class LeadService {
     public static LeadService getInstance() {
         return new LeadService();
     }
+
+    /**
+     * Given a list of Lead IDs, return the corresponding list of Lead
+     * records with the Validated Email field set correctly for each lead.
+     *
+     * @param recordIds
+     *
+     * @return the list of Lead objects with Email Validation Status set
+     */
+    public List<Lead> validateEmail(List<Id> recordIds) {
+        return this.validateEmail([
+            SELECT
+                Email,
+                Id
+            FROM Lead
+            WHERE Id IN :recordIds
+        ]);
+    }
     
     /**
      * Given a list of Lead objects, return the corresponding list of Lead
