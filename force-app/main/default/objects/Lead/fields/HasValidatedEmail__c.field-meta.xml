@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasValidatedEmail__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Whether the value in the Email field has been validated successfully</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Whether the value in the Email field has been validated successfully</inlineHelpText>
+    <label>Validated Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
